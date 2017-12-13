@@ -10,15 +10,20 @@ import UIKit
 
 class GroceryItemTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var groceryItem: UILabel!
+    
+    @IBOutlet weak var groceryItemDetail: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func getGroceryItems(groceryItem: GroceryItem){
+        self.groceryItem.text = groceryItem.item
+        self.groceryItemDetail.text = groceryItem.addedByUser
     }
 
 }

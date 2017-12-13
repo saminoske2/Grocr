@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+struct GroceryData {
+    var groceryList: [GroceryItem] = []
+    
+    var users: [GrocrUser] = []
+}
